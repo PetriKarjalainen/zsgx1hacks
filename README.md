@@ -25,7 +25,12 @@ This is a cheap Pan Tilt IP Camera (supposedly 1080p) that for a time was availa
 
 ### Instructions
 * Create network connection
-  * WiFi - setup camera via app
+  * WiFi - setup camera via app or with alternate method below:
+     - connect to wired ethernet and telnet to camera ip. loging using root/cxlinux
+     - cd /home
+     - vi wpa_supplicant.conf_EYERD to change your wlan ssid and password to "brackets"
+     - vi start.sh and remove # from beginning of row which starts by #wpa_supplicant....
+     - reboot and you are connected to your own wlan
   * Ethernet - plug in to network (doesn't need app setup)
 * Download [zsgx1hacks-v0.4.zip](https://github.com/ant-thomas/zsgx1hacks/raw/master/zsgx1hacks-v0.4.zip) and extract the contents of the zip file to a vfat/fat32 formatted microSD card
 * Change options in `config.txt`
